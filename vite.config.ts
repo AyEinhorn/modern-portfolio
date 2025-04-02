@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     assetsDir: 'assets',
+    outDir: 'dist',
   },
   css: {
     postcss: {
