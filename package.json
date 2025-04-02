@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && npm run build:css && vite build",
+    "build:css": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --minify",
+    "build": "tsc -b && vite build && npm run build:css",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "build:css": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --minify"
+    "preview": "vite preview"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
