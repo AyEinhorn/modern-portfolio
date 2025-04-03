@@ -47,40 +47,50 @@ const About = () => {
             viewport={{ once: true }}
             className="md:pr-2"
           >
-            <h3 className="text-lg md:text-xl font-bold mb-2">
+            <h3 className="text-lg md:text-xl font-bold mb-2 px-1">
               I'm a Fullstack Developer with a unique background
             </h3>
             
-            <p className="text-gray-600 mb-2 text-xs md:text-sm">
+            <p className="text-gray-600 mb-2 text-xs md:text-sm px-1">
               With a background in pharmacy and a passion for technology, I made a career transition that combines the best of both worlds: attention to detail, analytical thinking, and creative problem-solving.
             </p>
             
-            <p className="text-gray-600 mb-3 text-xs md:text-sm">
+            <p className="text-gray-600 mb-3 text-xs md:text-sm px-1">
               My experience in education has honed my communication skills and ability to explain complex concepts clearly—skills that translate perfectly to collaborative development environments. I specialize in React and Full Stack development, building applications that are not only functional but intuitive and user-friendly.
             </p>
             
-            <div className="grid grid-cols-2 gap-2 mb-3">
-              <div>
-                <h4 className="font-semibold mb-0 text-xs md:text-sm">Name:</h4>
-                <p className="text-gray-600 text-xs md:text-sm">Allan Einhorn</p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-0 text-xs md:text-sm">Email:</h4>
-                <p className="text-gray-600 text-xs md:text-sm">a.einhorn886@gmail.com</p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-0 text-xs md:text-sm">From:</h4>
-                <p className="text-gray-600 text-xs md:text-sm">San Antonio, TX</p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-0 text-xs md:text-sm">Specialty:</h4>
-                <p className="text-gray-600 text-xs md:text-sm">Fullstack Development</p>
+            <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 shadow-sm mb-4">
+              <h4 className="text-sm font-bold mb-2 text-blue-600 border-b pb-1 border-gray-200 px-1">Personal Information</h4>
+              <div className="grid grid-cols-2 gap-x-3 gap-y-2 px-2">
+                <div className="flex items-center">
+                  <span className="text-gray-500 text-xs w-16 mr-1">Name:</span>
+                  <span className="text-gray-800 font-medium text-sm">Allan Einhorn</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-gray-500 text-xs w-16 mr-1">Email:</span>
+                  <a href="mailto:a.einhorn886@gmail.com" className="text-blue-600 hover:text-blue-800 transition-colors font-medium text-sm">
+                    a.einhorn886@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-gray-500 text-xs w-16 mr-1">Location:</span>
+                  <span className="text-gray-800 font-medium text-sm">San Antonio, TX</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-gray-500 text-xs w-16 mr-1">Specialty:</span>
+                  <span className="text-gray-800 font-medium text-sm">Fullstack Dev</span>
+                </div>
               </div>
             </div>
             
-            <a href="#contact" className="btn btn-primary py-1 px-4 text-xs md:text-sm">
-              Contact Me
-            </a>
+            <div className="text-center md:text-left">
+              <a 
+                href="#contact" 
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all transform hover:-translate-y-1 hover:shadow-lg text-sm"
+              >
+                Contact Me
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
