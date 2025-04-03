@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import aboutPhoto from '../../assets/about-photo.jpg';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -84,12 +85,12 @@ const About = () => {
             </div>
             
             <div className="text-center md:text-left">
-              <a 
-                href="#contact" 
+              <Link 
+                to="/contact"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all transform hover:-translate-y-1 hover:shadow-lg text-sm"
               >
                 Contact Me
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
