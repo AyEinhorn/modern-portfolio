@@ -1,5 +1,13 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm install --no-optional",
-  "framework": "vite"
+  "buildCommand": "CI=false npm run build:vercel",
+  "installCommand": "npm install --no-optional --legacy-peer-deps",
+  "framework": "vite",
+  "outputDirectory": "dist",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "env": {
+    "NPM_FLAGS": "--no-optional --no-audit --legacy-peer-deps"
+  }
 } 
