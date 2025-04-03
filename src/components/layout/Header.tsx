@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from '../ui/ThemeToggle';
+import resumePDF from '../../assets/Allan-Einhorn-Resume-2025.pdf';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -139,7 +140,7 @@ const Header = () => {
           <ThemeToggle />
           
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/ayeinhorn"
             target="_blank"
             rel="noopener noreferrer"
             className={`mr-4 transition-colors hidden md:block ${
@@ -155,9 +156,9 @@ const Header = () => {
             </svg>
           </motion.a>
           
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+          <motion.a
+            href={resumePDF}
+            download="Allan-Einhorn-Resume.pdf"
             className="py-2 px-4 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium text-sm hidden md:block transition-all hover:shadow-lg hover:shadow-primary-500/25 dark:hover:shadow-accent-500/25"
             whileHover={{ 
               scale: 1.05, 
@@ -165,9 +166,11 @@ const Header = () => {
               backgroundSize: '200% 200%',
             }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
           >
             Download CV
-          </motion.button>
+          </motion.a>
           
           <div className="md:hidden">
             <button 
@@ -250,9 +253,13 @@ const Header = () => {
                   </svg>
                 </a>
                 <ThemeToggle />
-                <button className="py-2 px-4 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white text-sm font-medium">
+                <a 
+                  href={resumePDF}
+                  download="Allan-Einhorn-Resume.pdf"
+                  className="py-2 px-4 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white text-sm font-medium"
+                >
                   Download CV
-                </button>
+                </a>
               </div>
             </nav>
           </motion.div>
