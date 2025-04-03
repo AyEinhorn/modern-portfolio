@@ -204,14 +204,15 @@ const Header = () => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className={`md:hidden overflow-hidden ${
+            className={`md:hidden overflow-hidden w-full ${
               isScrolled ? 'bg-white dark:bg-gray-800' : 'bg-gray-900'
             }`}
+            style={{ maxWidth: '100vw', overflowX: 'hidden' }}
           >
-            <nav className={`container py-4 border-t ${
+            <nav className={`py-4 px-4 border-t ${
               isScrolled ? 'border-gray-100 dark:border-gray-700' : 'border-gray-800'
             }`}>
-              <ul className="space-y-3">
+              <ul className="space-y-3 w-full overflow-x-hidden">
                 {navItems.map((item) => (
                   <motion.li 
                     key={item.path}

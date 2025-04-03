@@ -4,11 +4,11 @@ import Skills from '../components/sections/Skills';
 
 const HomePage = () => {
   return (
-    <>
+    <div className="bg-white dark:bg-gray-900 overflow-x-hidden">
       <Hero />
       <About />
       <Skills />
-    </>
+    </div>
   );
 };
 
