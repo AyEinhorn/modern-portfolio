@@ -130,9 +130,8 @@ const Skills = () => {
           <h3 className="text-xl font-bold mb-6 text-center text-gray-800 dark:text-white">Additional Skills</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'Responsive Design', 'UX/UI Fundamentals', 'Cross-Browser Compatibility',
-              'Agile Methodology', 'Code Review', 'Mentoring', 'Documentation',
-              'Figma', 'Accessibility', 'Performance Optimization'
+              'Performance Optimization', 'Code Review', 'Debugging', 'Error Handling', 'Mentoring', 'Reponsive Design',
+              'Agile Methodology', 'Accessibility', 'SEO'
             ].map((skill, index) => (
               <motion.span
                 key={skill}
