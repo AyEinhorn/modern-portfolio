@@ -105,7 +105,7 @@ const Experience = () => {
                     </div>
                     
                     {/* Timeline dot */}
-                    <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 border-4 border-white dark:border-gray-900 relative z-10 my-4 md:my-0 shadow-lg">
+                    <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 border-4 border-white dark:border-gray-900 relative z-10 my-4 md:my-0 shadow-lg hidden md:flex">
                       <span className="text-white text-xs font-bold">{item.id}</span>
                     </div>
                     
@@ -118,7 +118,7 @@ const Experience = () => {
                     <div className="md:w-5/12 hidden md:block"></div>
                     
                     {/* Timeline dot */}
-                    <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 border-4 border-white dark:border-gray-900 relative z-10 my-4 md:my-0 shadow-lg">
+                    <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 border-4 border-white dark:border-gray-900 relative z-10 my-4 md:my-0 shadow-lg hidden md:flex">
                       <span className="text-white text-xs font-bold">{item.id}</span>
                     </div>
                     
