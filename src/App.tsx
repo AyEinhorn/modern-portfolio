@@ -6,11 +6,13 @@ import AboutPage from './pages/AboutPage';
 import ResumePage from './pages/ResumePage';
 import ContactPage from './pages/ContactPage';
 import { ThemeProvider } from './contexts/ThemeContext';
+import ScrollToTop from './components/utils/ScrollToTop';
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
