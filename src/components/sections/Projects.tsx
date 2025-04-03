@@ -1,5 +1,8 @@
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import crownImage from '../../assets/crown-clothing-img.jpg';
+import roboImage from '../../assets/robo-portfolio.jpg';
+import gameHubImage from '../../assets/game-hub-sm.png';
 
 interface Project {
   id: number;
@@ -12,68 +15,38 @@ interface Project {
   category: string;
 }
 
-// Optimized project data with smaller image placeholders
-// Using a specific size for images helps browser optimize loading
+// Updated project data with actual projects
 const projectsData: Project[] = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce platform with product catalog, shopping cart, user authentication, and payment processing.',
-    image: 'https://placehold.co/600x400/e2e8f0/1e40af?text=E-commerce',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
-    liveUrl: 'https://example.com',
-    repoUrl: 'https://github.com/yourusername/ecommerce',
+    title: 'Crown Clothing',
+    description: 'An e-commerce website I engineered using React. I leveraged Firebase for User Auth and utilized a Firebase NoSQL DB to store user and product data. Additionally I applied Context API for state management.',
+    image: crownImage,
+    technologies: ['React', 'Firebase', 'Context API', 'NoSQL', 'CSS'],
+    liveUrl: 'https://allans-crown-clothing.netlify.app/',
+    repoUrl: 'https://github.com/ADOwen/crown-clothing',
     category: 'fullstack'
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A Kanban-style task management application with drag-and-drop functionality, task assignment, and progress tracking.',
-    image: 'https://placehold.co/600x400/e2e8f0/1e40af?text=Task+Manager',
-    technologies: ['React', 'TypeScript', 'Redux', 'Firebase'],
-    liveUrl: 'https://example.com',
-    repoUrl: 'https://github.com/yourusername/task-manager',
+    title: 'GameHub',
+    description: 'A game discovery app where you can search for video games using the Rawg.io API.',
+    image: gameHubImage,
+    technologies: ['React', 'TypeScript', 'API Integration', 'CSS', 'Axios'],
+    liveUrl: 'https://game-hub-allan.vercel.app/',
+    repoUrl: 'https://github.com/ADOwen/game-hub',
     category: 'frontend'
   },
   {
     id: 3,
-    title: 'Social Media Dashboard',
-    description: 'An analytics dashboard for monitoring social media engagement across multiple platforms.',
-    image: 'https://placehold.co/600x400/e2e8f0/1e40af?text=Social+Dashboard',
-    technologies: ['React', 'Chart.js', 'Material UI', 'REST APIs'],
-    liveUrl: 'https://example.com',
-    repoUrl: 'https://github.com/yourusername/social-dashboard',
+    title: 'Robofriends',
+    description: 'A react app where you can search for robots. Uses Redux for state management.',
+    image: roboImage,
+    technologies: ['React', 'Redux', 'JavaScript', 'API Integration', 'CSS'],
+    liveUrl: 'https://adowen.github.io/robofriends/',
+    repoUrl: 'https://github.com/ADOwen/robofriends',
     category: 'frontend'
   },
-  {
-    id: 4,
-    title: 'RESTful API Service',
-    description: 'A secure API service with authentication, rate limiting, and data validation for a mobile application.',
-    image: 'https://placehold.co/600x400/e2e8f0/1e40af?text=REST+API',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Jest'],
-    repoUrl: 'https://github.com/yourusername/api-service',
-    category: 'backend'
-  },
-  {
-    id: 5,
-    title: 'Educational Quiz Platform',
-    description: 'An interactive quiz platform for students with different question types, timing, and score tracking.',
-    image: 'https://placehold.co/600x400/e2e8f0/1e40af?text=Quiz+Platform',
-    technologies: ['React', 'Next.js', 'Tailwind CSS', 'Firebase'],
-    liveUrl: 'https://example.com',
-    repoUrl: 'https://github.com/yourusername/quiz-platform',
-    category: 'fullstack'
-  },
-  {
-    id: 6,
-    title: 'Weather Forecast App',
-    description: 'A responsive weather application with current conditions, forecasts, and location search.',
-    image: 'https://placehold.co/600x400/e2e8f0/1e40af?text=Weather+App',
-    technologies: ['React', 'Weather API', 'CSS Modules', 'Geolocation API'],
-    liveUrl: 'https://example.com',
-    repoUrl: 'https://github.com/yourusername/weather-app',
-    category: 'frontend'
-  }
 ];
 
 const categories = ['all', 'frontend', 'backend', 'fullstack'];
