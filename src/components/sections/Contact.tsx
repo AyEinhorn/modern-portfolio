@@ -51,8 +51,8 @@ const Contact = () => {
         </svg>
       ),
       label: 'Email',
-      value: 'your-email@example.com',
-      href: 'mailto:your-email@example.com',
+      value: 'a.einhorn886@gmail.com',
+      href: 'mailto:a.einhorn886@gmail.com',
     },
     {
       icon: (
@@ -61,7 +61,7 @@ const Contact = () => {
         </svg>
       ),
       label: 'Location',
-      value: 'Your City, Your Country',
+      value: 'San Antonio, Texas',
     },
     {
       icon: (
@@ -126,7 +126,7 @@ const Contact = () => {
             <h4 className="text-lg font-semibold mb-4">Social Profiles</h4>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/ayeinhorn" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-blue-600 transition-colors"
@@ -137,7 +137,7 @@ const Contact = () => {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://linkedin.com/in/allan-einhorn" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-blue-800 transition-colors"
@@ -148,7 +148,7 @@ const Contact = () => {
                 </svg>
               </a>
               <a 
-                href="https://twitter.com/yourusername" 
+                href="https://twitter.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-blue-400 flex items-center justify-center text-white hover:bg-blue-500 transition-colors"

@@ -61,27 +61,20 @@ const Teaching = () => {
             <div className="space-y-8">
               <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-4 before:h-4 before:rounded-full before:bg-blue-600 before:z-10 before:border-4 before:border-white">
                 <h4 className="text-xl font-semibold">Web Development Instructor</h4>
-                <p className="text-gray-500 mb-2">Tech University • 2019-2020</p>
+                <p className="text-gray-500 mb-2">EdX Bootcamp • 2022 - Present</p>
                 <p className="text-gray-600">
-                  Taught comprehensive web development courses covering HTML, CSS, JavaScript, and React. Developed curriculum that balanced theoretical concepts with hands-on projects.
+                  Taught comprehensive web development courses covering React, TypeScript, Node.js, and Postgres/MongoDB. Delivered curriculum with balanced theoretical concepts with hands-on projects.
                 </p>
               </div>
               
               <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-4 before:h-4 before:rounded-full before:bg-blue-600 before:z-10 before:border-4 before:border-white">
-                <h4 className="text-xl font-semibold">Code Bootcamp Instructor</h4>
-                <p className="text-gray-500 mb-2">Coding Academy • 2018-2019</p>
+                <h4 className="text-xl font-semibold">Web Development Instructor</h4>
+                <p className="text-gray-500 mb-2"> ICode </p>
                 <p className="text-gray-600">
-                  Led intensive 12-week bootcamp sessions teaching full-stack development. Guided students through building portfolio projects and prepared them for technical interviews.
+                  Taught foundational web development concepts such as HTML, CSS, and JavaScript to K-12 students in a fun and interactive environment. Encouraged critical thinking, logical problem-solving, and an interest in STEM through engaging coding activities.
                 </p>
               </div>
-              
-              <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-4 before:h-4 before:rounded-full before:bg-blue-600 before:z-10 before:border-4 before:border-white">
-                <h4 className="text-xl font-semibold">Guest Lecturer</h4>
-                <p className="text-gray-500 mb-2">Various Institutions • 2017-Present</p>
-                <p className="text-gray-600">
-                  Regularly speak at tech meetups and educational institutions about web development, career transitions, and continuing education in tech.
-                </p>
-              </div>
+ 
             </div>
           </motion.div>
           
@@ -104,7 +97,7 @@ const Teaching = () => {
               </p>
             </div>
             
-            <div>
+            <div className='hidden'>
               <h4 className="text-xl font-semibold mb-4">Mentorship Programs</h4>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
@@ -130,7 +123,7 @@ const Teaching = () => {
           </motion.div>
         </div>
         
-        <motion.div
+        <motion.div className='hidden'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}

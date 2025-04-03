@@ -167,9 +167,9 @@ const Footer = () => {
           className="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 dark:text-gray-400"
         >
           <p>
-            &copy; {currentYear} Your Name. All rights reserved.
+            &copy; {currentYear} Allan Einhorn. All rights reserved.
             <span className="mx-2">•</span>
-            Designed with <span className="text-accent-500">♥</span> by Your Name
+            Designed with <span className="text-accent-500">♥</span> by Allan Einhorn
           </p>
         </motion.div>
       </div>
