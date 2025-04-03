@@ -12,8 +12,6 @@ import initScrollbarGradient from './utils/scrollbarGradient';
 
 // Wrapper component that initializes features requiring hooks
 const AppContent = () => {
-  const location = useLocation();
-
   // Initialize the scrollbar gradient on mount
   useEffect(() => {
     initScrollbarGradient();

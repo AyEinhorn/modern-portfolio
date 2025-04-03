@@ -60,7 +60,7 @@ const skillsData: SkillCategory[] = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section bg-gray-50 dark:bg-gray-900 py-2 md:py-4 overflow-x-hidden">
+    <section id="skills" className="section bg-gray-50 dark:bg-gray-900 py-2 md:py-4 overflow-hidden">
       <div className="container max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
