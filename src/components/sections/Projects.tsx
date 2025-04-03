@@ -102,23 +102,23 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-6 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Projects Showcase</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 dark:text-white">Projects Showcase</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto"></div>
-          <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
             A collection of my recent projects demonstrating my technical skills and problem-solving approach.
           </p>
         </motion.div>
         
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-6">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => !isAnimating && handleFilterChange(category)}
                 disabled={isAnimating}
-                className={`px-4 py-2 rounded-full capitalize transition-all ${
+                className={`px-4 py-1.5 rounded-full capitalize transition-all text-sm ${
                   filter === category
                     ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -137,7 +137,7 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5"
           >
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -149,15 +149,15 @@ const Projects = () => {
               >
                 <LazyImage src={project.image} alt={project.title} />
                 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{project.description}</p>
+                <div className="p-4">
+                  <h3 className="text-lg font-bold mb-2 dark:text-white">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-3 line-clamp-3 text-sm">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex} 
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                        className="px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
                       >
                         {tech}
                       </span>
@@ -170,9 +170,9 @@ const Projects = () => {
                         href={project.liveUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center text-primary-500 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium"
+                        className="flex items-center text-primary-500 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium text-sm"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                         </svg>
                         Live Demo
@@ -183,9 +183,9 @@ const Projects = () => {
                         href={project.repoUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium"
+                        className="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium text-sm"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                         </svg>
                         Code
