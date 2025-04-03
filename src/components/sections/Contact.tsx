@@ -67,7 +67,7 @@ const Contact = () => {
       };
       
       // Use send method instead of sendForm
-      const result = await (window as any).emailjs.send(
+      const result: EmailJSResponse = await (window as any).emailjs.send(
         'service_rqewbqj',
         'contact_form',
         templateParams,
