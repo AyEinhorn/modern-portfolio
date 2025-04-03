@@ -54,7 +54,7 @@ const About = () => {
             </p>
             
             <p className="text-gray-600 mb-6">
-              My experience in education has honed my communication skills and ability to explain complex concepts clearly—skills that translate perfectly to collaborative development environments. I specialize in the MERN stack (MongoDB, Express, React, Node.js) and TypeScript, building applications that are not only functional but intuitive and user-friendly.
+              My experience in education has honed my communication skills and ability to explain complex concepts clearly—skills that translate perfectly to collaborative development environments. I specialize in React and Full Stack development, building applications that are not only functional but intuitive and user-friendly.
             </p>
             
             <div className="grid grid-cols-2 gap-4 mb-8">
