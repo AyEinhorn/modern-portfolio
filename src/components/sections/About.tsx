@@ -68,7 +68,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center">
                   <span className="text-gray-500 text-xs w-16 mr-1">Email:</span>
-                  <a href="mailto:a.einhorn886@gmail.com" className="text-blue-600 hover:text-blue-800 transition-colors font-medium text-sm">
+                  <a href="mailto:a.einhorn886@gmail.com" className="text-blue-600 hover:text-blue-800 transition-colors font-medium text-sm max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
                     a.einhorn886@gmail.com
                   </a>
                 </div>
