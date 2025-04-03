@@ -13,25 +13,25 @@ const skillsData: SkillCategory[] = [
   {
     name: 'Frontend',
     skills: [
-      { name: 'HTML/CSS', level: 9 },
-      { name: 'JavaScript', level: 9 },
-      { name: 'TypeScript', level: 8 },
       { name: 'React', level: 9 },
-      { name: 'Redux', level: 8 },
+      { name: 'TypeScript', level: 8 },
+      { name: 'JavaScript', level: 9 },
       { name: 'Next.js', level: 7 },
-      { name: 'Tailwind CSS', level: 8 },
+      { name: 'HTML/CSS', level: 9 },
+      { name: 'Redux', level: 7 },
+      { name: 'Tailwind CSS', level: 7 },
       { name: 'Material UI', level: 7 },
     ]
   },
   {
     name: 'Backend',
     skills: [
+      { name: 'REST API', level: 9 },
       { name: 'Node.js', level: 8 },
       { name: 'Express', level: 8 },
       { name: 'MongoDB', level: 7 },
-      { name: 'SQL', level: 6 },
-      { name: 'REST API', level: 8 },
-      { name: 'GraphQL', level: 6 },
+      { name: 'SQL', level: 7 },
+      { name: 'GraphQL', level: 7 },
       { name: 'Authentication', level: 7 },
     ]
   },
@@ -39,12 +39,10 @@ const skillsData: SkillCategory[] = [
     name: 'Tools & Others',
     skills: [
       { name: 'Git', level: 8 },
-      { name: 'Webpack', level: 7 },
       { name: 'Vite', level: 8 },
       { name: 'Jest', level: 7 },
-      { name: 'CI/CD', level: 6 },
-      { name: 'Docker', level: 5 },
-      { name: 'AWS', level: 6 },
+      { name: 'Cypress', level: 5 },
+      { name: 'AWS', level: 5 },
     ]
   },
   {
@@ -55,7 +53,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Problem Solving', level: 8 },
       { name: 'Teaching', level: 9 },
       { name: 'Time Management', level: 8 },
-      { name: 'Adaptability', level: 8 },
+      { name: 'Adaptability', level: 9 },
     ]
   }
 ];
