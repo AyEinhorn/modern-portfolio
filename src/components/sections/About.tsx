@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <section id="about" className="section bg-white py-6 md:py-10">
+    <section id="about" className="section bg-white py-6 md:py-10 overflow-x-hidden">
       <div className="container max-w-screen-lg mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-4 md:mb-6 text-center"
+          className="mb-4 md:mb-5 text-center"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-2">About Me</h2>
           <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
@@ -26,7 +26,7 @@ const About = () => {
             className="max-w-full"
           >
             <div className="relative">
-              <div className="w-full rounded-lg overflow-hidden" style={{ maxHeight: '50vh' }}>
+              <div className="w-full rounded-lg overflow-hidden" style={{ maxHeight: '40vh' }}>
                 <img 
                   src={aboutPhoto}
                   alt="Picture of Allan Einhorn" 
@@ -48,7 +48,7 @@ const About = () => {
             viewport={{ once: true }}
             className="md:pr-2"
           >
-            <h3 className="text-lg md:text-xl font-bold mb-2 px-1">
+            <h3 className="text-lg md:text-xl font-bold mb-1 px-1">
               I'm a Fullstack Developer with a unique background
             </h3>
             
@@ -56,13 +56,13 @@ const About = () => {
               With a background in pharmacy and a passion for technology, I made a career transition that combines the best of both worlds: attention to detail, analytical thinking, and creative problem-solving.
             </p>
             
-            <p className="text-gray-600 mb-3 text-xs md:text-sm px-1">
+            <p className="text-gray-600 mb-2 text-xs md:text-sm px-1">
               My experience in education has honed my communication skills and ability to explain complex concepts clearly—skills that translate perfectly to collaborative development environments. I specialize in React and Full Stack development, building applications that are not only functional but intuitive and user-friendly.
             </p>
             
-            <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 shadow-sm mb-4">
-              <h4 className="text-sm font-bold mb-2 text-blue-600 border-b pb-1 border-gray-200 px-1">Personal Information</h4>
-              <div className="grid grid-cols-2 gap-x-3 gap-y-2 px-2">
+            <div className="bg-gray-50 rounded-lg p-2 border border-gray-100 shadow-sm mb-3">
+              <h4 className="text-sm font-bold mb-1 text-blue-600 border-b pb-1 border-gray-200 px-1">Personal Information</h4>
+              <div className="grid grid-cols-2 gap-x-2 gap-y-1 px-2">
                 <div className="flex items-center">
                   <span className="text-gray-500 text-xs w-16 mr-1">Name:</span>
                   <span className="text-gray-800 font-medium text-sm">Allan Einhorn</span>
