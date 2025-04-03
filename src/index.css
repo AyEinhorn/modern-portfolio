@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,10 +5,45 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Variables for Firefox scrollbar colors */
+    --scrollbar-color: theme('colors.primary.500');
+    --scrollbar-hover-color: theme('colors.accent.500');
+    --scrollbar-track-color: theme('colors.gray.100');
+    --scrollbar-dark-track-color: theme('colors.gray.800');
   }
   
   body {
     @apply bg-gray-50 text-gray-900 font-sans;
+  }
+
+  /* Modern Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  /* Initial gradient that will be overridden by JavaScript */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-primary-500 to-accent-500 rounded-full;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gradient-to-b from-primary-400 to-accent-400;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-track-color);
+  }
+
+  .dark * {
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-dark-track-color);
   }
 }
 
