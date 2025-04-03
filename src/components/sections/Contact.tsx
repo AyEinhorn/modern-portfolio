@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+// Define emailjs service information
+interface EmailJSResponse {
+  status: number;
+  text: string;
+}
+
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -12,6 +19,24 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [emailJSLoaded, setEmailJSLoaded] = useState(false);
+  
+  // Load the EmailJS script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    script.async = true;
+    script.onload = () => {
+      // Initialize EmailJS with your user ID
+      (window as any).emailjs.init("jFrBnT0aTm2DLqDLb"); // Get this from your EmailJS dashboard
+      setEmailJSLoaded(true);
+    };
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormState({
@@ -22,22 +47,47 @@ const Contact = () => {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!emailJSLoaded) {
+      setSubmitError('Email service is still loading. Please try again.');
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitError('');
     
     try {
-      // In a real app, this would be an API call
-      // For demo purposes, we'll simulate a successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitSuccess(true);
-      setFormState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
+      // Create template parameters that match your EmailJS template variables
+      const templateParams = {
+        user_name: formState.name,
+        user_email: formState.email,
+        message: formState.message,
+        // Keep subject for your records even if not in template
+        subject: formState.subject
+      };
+      
+      // Use send method instead of sendForm
+      const result = await (window as any).emailjs.send(
+        'service_rqewbqj',
+        'contact_form',
+        templateParams,
+        'jFrBnT0aTm2DLqDLb'
+      );
+      
+      if (result.status === 200) {
+        setSubmitSuccess(true);
+        setFormState({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        throw new Error(result.text);
+      }
     } catch (error) {
-      setSubmitError('There was an error sending your message. Please try again.');
+      console.error('Email error:', error);
+      setSubmitError('There was an error sending your message. Please try again or contact me directly at a.einhorn886@gmail.com');
     } finally {
       setIsSubmitting(false);
     }
@@ -184,7 +234,7 @@ const Contact = () => {
                   </div>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-gray-700 font-medium mb-1">Name</label>
@@ -246,14 +296,14 @@ const Contact = () => {
                   
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !emailJSLoaded}
                     className={`w-full py-3 px-6 rounded-md font-medium transition-colors ${
-                      isSubmitting
+                      isSubmitting || !emailJSLoaded
                         ? 'bg-gray-400 cursor-not-allowed'
                         : 'bg-blue-600 hover:bg-blue-700 text-white'
                     }`}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'Sending...' : !emailJSLoaded ? 'Loading...' : 'Send Message'}
                   </button>
                 </form>
               )}

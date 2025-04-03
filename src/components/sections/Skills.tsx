@@ -91,7 +91,7 @@ const Skills = () => {
                 </span>
                 {category.name}
               </h3>
-              
+
               <div className="space-y-5">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name}>
@@ -105,13 +105,12 @@ const Skills = () => {
                         whileInView={{ width: `${skill.level * 10}%` }}
                         transition={{ duration: 1, delay: skillIndex * 0.1 }}
                         viewport={{ once: true }}
-                        className={`h-full rounded-full ${
-                          skill.level >= 8 
+                        className={`h-full rounded-full ${skill.level >= 8
                             ? 'bg-gradient-to-r from-primary-500 to-accent-500'
                             : skill.level >= 6
                               ? 'bg-gradient-to-r from-primary-400 to-accent-400'
                               : 'bg-gradient-to-r from-primary-300 to-accent-300'
-                        }`}
+                          }`}
                       ></motion.div>
                     </div>
                   </div>
@@ -141,8 +140,8 @@ const Skills = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                whileHover={{ 
-                  scale: 1.05, 
+                whileHover={{
+                  scale: 1.05,
                   backgroundColor: index % 3 === 0 ? '#e5f7ff' : index % 3 === 1 ? '#e5ffe8' : '#f5e5ff',
                   color: index % 3 === 0 ? '#0078d4' : index % 3 === 1 ? '#00a854' : '#8c00d4',
                 }}
