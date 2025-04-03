@@ -17,7 +17,7 @@ const About = () => {
           <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -26,7 +26,7 @@ const About = () => {
             className="max-w-full"
           >
             <div className="relative">
-              <div className="w-full rounded-lg overflow-hidden" style={{ maxHeight: '40vh' }}>
+              <div className="w-full rounded-lg overflow-hidden" style={{ maxHeight: '50vh' }}>
                 <img 
                   src={aboutPhoto}
                   alt="Picture of Allan Einhorn" 
@@ -48,7 +48,7 @@ const About = () => {
             viewport={{ once: true }}
             className="md:pr-2"
           >
-            <h3 className="text-lg md:text-xl font-bold mb-1 px-1">
+            <h3 className="text-lg md:text-xl font-bold mb-2 px-1">
               I'm a Fullstack Developer with a unique background
             </h3>
             
@@ -60,7 +60,7 @@ const About = () => {
               My experience in education has honed my communication skills and ability to explain complex concepts clearly—skills that translate perfectly to collaborative development environments. I specialize in React and Full Stack development, building applications that are not only functional but intuitive and user-friendly.
             </p>
             
-            <div className="bg-gray-50 rounded-lg p-2 border border-gray-100 shadow-sm mb-3">
+            <div className="bg-gray-50 rounded-lg p-2 md:p-3 border border-gray-100 shadow-sm mb-3">
               <h4 className="text-sm font-bold mb-1 text-blue-600 border-b pb-1 border-gray-200 px-1">Personal Information</h4>
               <div className="grid grid-cols-2 gap-x-2 gap-y-1 px-2">
                 <div className="flex items-center">
@@ -84,7 +84,7 @@ const About = () => {
               </div>
             </div>
             
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left mb-2">
               <Link 
                 to="/contact"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all transform hover:-translate-y-1 hover:shadow-lg text-sm"
