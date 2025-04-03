@@ -239,7 +239,7 @@ const Header = () => {
                 isScrolled ? 'border-gray-100 dark:border-gray-700' : 'border-gray-800'
               }`}>
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/ayeinhorn" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`transition-colors ${

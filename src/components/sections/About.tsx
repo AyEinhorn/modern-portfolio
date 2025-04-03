@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import aboutPhoto from '../../assets/about-photo.jpg';
 
 const About = () => {
   return (
@@ -23,12 +24,11 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="relative">
-              <div className="w-full h-80 bg-gray-200 rounded-lg overflow-hidden">
-                {/* Replace with your image */}
+              <div className="w-full rounded-lg overflow-hidden" style={{ height: 'auto' }}>
                 <img 
-                  src="https://via.placeholder.com/600x800" 
+                  src={aboutPhoto}
                   alt="Picture of Allan Einhorn" 
-                  className="w-full h-full object-cover"
+                  className="w-full"
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex flex-col items-center justify-center shadow-lg transform rotate-3 z-10">
