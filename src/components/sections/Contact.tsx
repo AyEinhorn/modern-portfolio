@@ -28,7 +28,7 @@ const Contact = () => {
     script.async = true;
     script.onload = () => {
       // Initialize EmailJS with your user ID
-      (window as any).emailjs.init("jFrBnT0aTm2DLqDLb"); // Get this from your EmailJS dashboard
+      (window as any).emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY); // Get this from your EmailJS dashboard
       setEmailJSLoaded(true);
     };
     document.body.appendChild(script);
@@ -68,10 +68,10 @@ const Contact = () => {
       
       // Use send method instead of sendForm
       const result: EmailJSResponse = await (window as any).emailjs.send(
-        'service_rqewbqj',
-        'contact_form',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        'jFrBnT0aTm2DLqDLb'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       
       if (result.status === 200) {
