@@ -125,14 +125,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section bg-gray-50 py-4 md:py-8">
-      <div className="container max-w-5xl mx-auto">
+    <section id="contact" className="section bg-gray-50 py-2 md:py-4 overflow-x-hidden">
+      <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-3 md:mb-5 text-center"
+          className="mb-3 md:mb-4 text-center"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-1">Get In Touch</h2>
           <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
@@ -141,13 +141,13 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:pr-8 xl:pr-12"
+            className="lg:pr-4"
           >
             <h3 className="text-xl font-bold mb-3">Contact Information</h3>
             <p className="text-gray-600 mb-3 text-sm">
@@ -217,7 +217,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="md:pl-8 xl:pl-12"
+            className="lg:pl-4"
           >
             <div className="bg-white p-4 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">Send Me a Message</h3>
