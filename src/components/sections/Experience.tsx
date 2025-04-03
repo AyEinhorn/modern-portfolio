@@ -22,17 +22,25 @@ const experienceData: ExperienceItem[] = [
     id: 2,
     role: 'Web Development Instructor',
     company: 'iCode Afterschool Program',
-    period: '03/2024 - 08/2024',
+    period: '02/2024 - 08/2024',
     description: 'Taught foundational web development concepts to K-12 students in an engaging, interactive environment. Created activities that encouraged critical thinking and problem-solving while maintaining student interest in coding and STEM education.',
-    skills: ['HTML', 'CSS', 'JavaScript', 'Teaching', 'Curriculum Development', 'Student Engagement', 'STEM Education']
+    skills: ['STEM Education', 'JavaScript', 'HTML', 'CSS', 'Student Engagement']
   },
   {
     id: 3,
-    role: 'Pharmacy Specialist',
-    company: 'Healthcare Institution',
+    role: 'Cook || Manager',
+    company: 'Restaurant Management & Culinary Arts',
+    period: '02/2015 - 03/2021',
+    description: 'Prepared complex dishes as a professional line cook in high-volume, fast-paced Manhattan kitchens. Mastered multiple cooking stations and techniques while maintaining consistent quality during intense service hours. Additionally supported operations through inventory management and mentoring junior kitchen staff in culinary techniques and workflow efficiency.',
+    skills: ['Kitchen Workflow', 'Team Collaboration', 'High-Volume Service', 'Inventory Management', 'Staff Training', 'Culinary Techniques', 'Line Cooking', 'Food Preparation']
+  },
+  {
+    id: 4,
+    role: 'Pharmacy Technician',
+    company: 'MetroCare Pharmacy',
     period: '2007 - 2019',
-    description: 'Managed patient care and medication administration in a clinical setting. ',
-    skills: ['Problem Solving', 'Team Collaboration', 'Attention to Detail', 'Patient Communication']
+    description: 'Ensured precise medication preparation and counting with accuracy in a fast-paced environment. Operated pharmacy management software for prescription processing and billing, troubleshooting payment issues efficiently. Provided clear consultation to patients regarding medication usage, demonstrating strong communication skills and ability to translate complex information into accessible instructions.',
+    skills: ['Attention to Detail', 'Software Navigation', 'Problem Solving', 'Customer Communication', 'Workflow Efficiency', 'Error Prevention', 'Multi-tasking', 'Technical Documentation']
   }
 ];
 
