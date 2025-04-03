@@ -24,7 +24,7 @@ const About = () => {
             viewport={{ once: true }}
             className="max-w-full"
           >
-            <div className="relative md:mt-8">
+            <div className="relative">
               <div className="w-full rounded-lg overflow-hidden" style={{ maxHeight: '50vh' }}>
                 <img 
                   src={aboutPhoto}
