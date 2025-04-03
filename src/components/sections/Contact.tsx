@@ -125,55 +125,56 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section bg-gray-50">
-      <div className="container">
+    <section id="contact" className="section bg-gray-50 py-4 md:py-8">
+      <div className="container max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-3 md:mb-5 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-          <p className="mt-6 max-w-2xl mx-auto text-gray-600">
+          <h2 className="text-2xl md:text-3xl font-bold mb-1">Get In Touch</h2>
+          <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
+          <p className="mt-2 max-w-2xl mx-auto text-gray-600 text-sm">
             Have a project in mind or want to discuss a potential opportunity? I'd love to hear from you.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            className="md:pr-8 xl:pr-12"
           >
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            <p className="text-gray-600 mb-8">
+            <h3 className="text-xl font-bold mb-3">Contact Information</h3>
+            <p className="text-gray-600 mb-3 text-sm">
               Feel free to reach out through any of the following methods. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             
-            <div className="space-y-6 mb-8">
+            <div className="space-y-2 mb-4">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-start">
-                  <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold">{item.label}</h4>
+                    <h4 className="text-base font-semibold">{item.label}</h4>
                     {item.href ? (
-                      <a href={item.href} className="text-gray-600 hover:text-blue-600 transition-colors">
+                      <a href={item.href} className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-gray-600">{item.value}</p>
+                      <p className="text-gray-600 text-sm">{item.value}</p>
                     )}
                   </div>
                 </div>
               ))}
             </div>
             
-            <h4 className="text-lg font-semibold mb-4">Social Profiles</h4>
+            <h4 className="text-base font-semibold mb-3">Social Profiles</h4>
             <div className="flex space-x-4">
               <a 
                 href="https://github.com/ayeinhorn" 
@@ -216,80 +217,81 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
+            className="md:pl-8 xl:pl-12"
           >
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
+            <div className="bg-white p-4 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-2">Send Me a Message</h3>
               
               {submitSuccess ? (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-green-100 text-green-700 p-4 rounded-md mb-6"
+                  className="bg-green-100 text-green-700 p-3 rounded-md mb-4"
                 >
                   <div className="flex items-center">
-                    <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <p>Thank you for your message! I'll get back to you as soon as possible.</p>
+                    <p className="text-sm">Thank you for your message! I'll get back to you as soon as possible.</p>
                   </div>
                 </motion.div>
               ) : (
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div>
-                      <label htmlFor="name" className="block text-gray-700 font-medium mb-1">Name</label>
+                      <label htmlFor="name" className="block text-gray-700 font-medium mb-1 text-sm">Name</label>
                       <input
                         type="text"
                         id="name"
                         name="name"
                         value={formState.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-transparent text-sm"
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-gray-700 font-medium mb-1">Email</label>
+                      <label htmlFor="email" className="block text-gray-700 font-medium mb-1 text-sm">Email</label>
                       <input
                         type="email"
                         id="email"
                         name="email"
                         value={formState.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-transparent text-sm"
                         required
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-gray-700 font-medium mb-1">Subject</label>
+                    <label htmlFor="subject" className="block text-gray-700 font-medium mb-1 text-sm">Subject</label>
                     <input
                       type="text"
                       id="subject"
                       name="subject"
                       value={formState.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-transparent text-sm"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-gray-700 font-medium mb-1">Message</label>
+                    <label htmlFor="message" className="block text-gray-700 font-medium mb-1 text-sm">Message</label>
                     <textarea
                       id="message"
                       name="message"
                       value={formState.message}
                       onChange={handleChange}
-                      rows={5}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      rows={4}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-transparent text-sm"
                       required
                     ></textarea>
                   </div>
                   
                   {submitError && (
-                    <div className="text-red-600">
+                    <div className="text-red-600 text-sm">
                       {submitError}
                     </div>
                   )}
@@ -297,7 +299,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting || !emailJSLoaded}
-                    className={`w-full py-3 px-6 rounded-md font-medium transition-colors ${
+                    className={`w-full py-2 px-4 rounded-md font-medium transition-colors text-sm ${
                       isSubmitting || !emailJSLoaded
                         ? 'bg-gray-400 cursor-not-allowed'
                         : 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -315,4 +317,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
