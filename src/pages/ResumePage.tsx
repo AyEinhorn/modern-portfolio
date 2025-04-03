@@ -3,7 +3,7 @@ import Skills from '../components/sections/Skills';
 
 const ResumePage = () => {
   return (
-    <div className="pt-24 md:pt-28 bg-white dark:bg-gray-900">
+    <div className="pt-20 md:pt-24 bg-white dark:bg-gray-900 overflow-x-hidden">
       <Experience />
       <Skills />
     </div>

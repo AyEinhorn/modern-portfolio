@@ -3,7 +3,7 @@ import Teaching from '../components/sections/Teaching';
 
 const AboutPage = () => {
   return (
-    <div className="pt-24 md:pt-28 bg-white dark:bg-gray-900 overflow-x-hidden">
+    <div className="pt-20 md:pt-24 bg-white dark:bg-gray-900 overflow-x-hidden">
       <About />
       <Teaching />
     </div>

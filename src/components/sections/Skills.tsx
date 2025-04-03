@@ -60,18 +60,18 @@ const skillsData: SkillCategory[] = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section bg-gray-50 dark:bg-gray-900">
-      <div className="container">
+    <section id="skills" className="section bg-gray-50 dark:bg-gray-900 py-2 md:py-4 overflow-x-hidden">
+      <div className="container max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-6 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Skills & Technologies</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-1 dark:text-white">Skills & Technologies</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto"></div>
-          <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
             My technical toolkit and professional capabilities that I bring to every project.
           </p>
         </motion.div>
